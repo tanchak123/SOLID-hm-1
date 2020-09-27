@@ -11,11 +11,11 @@ public class Example {
         Machine machine = new Car();
         CarService carService = new CarServiceImpl(new MachineServiceImpl());
         carService.run((Car)machine);
-        System.out.printf("MachineServiceImpl: \nRUN\nTV: %s \nWi-Fi %s\nSTOP\nRUN\n", machine.isTv(), machine.isWiFi());
+        System.out.printf("MachineServiceImpl: \nRUN\nTV: %s \nWi-Fi %s\nSTOP\n", machine.isTv(), machine.isWiFi());
         carService.stop((Car)machine);
         carService = new CarServiceImpl(new MachineServiceUpdateImpl());
         carService.run((Car) machine);
-        System.out.printf("MachineServiceUpdateImpl: \nTV: %s \nWi-Fi %s\n", machine.isTv(), machine.isWiFi());
+        System.out.printf("MachineServiceUpdateImpl: \nRUN\nTV: %s \nWi-Fi %s\n", machine.isTv(), machine.isWiFi());
         carService.stop((Car) machine);
         System.out.printf("STOP: \nTV: %s \nWi-Fi %s\n", machine.isTv(), machine.isWiFi());
 
