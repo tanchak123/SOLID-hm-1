@@ -1,6 +1,6 @@
 # My description to homework
 ##### I will consistently write the code point by point referring to the principles of SOLID. GOOD LUCK HAVE FUN :)
-##1. Single Responsibility principle:
+## 1. Single Responsibility principle:
 + Create class "Machine" that is responsible for filling the fields.
 + Create class "MachineServiceImpl' that is responsible for basic function for consumer.
 + RESULT: 
@@ -8,14 +8,14 @@
       specific task.
 + Advantage: class is much easier to explain, understand and implement than the ones that provide 
 a solution for everything.
-##2. Open/Closed principle:
+## 2. Open/Closed principle:
 + Create single generic interface "MachineService" with two cores functions.
 + Create two new extends interfaces for imagination of addition of core functions.
 + RESULT: 
 *     We have 2 new interfaces that complement 
       "MachineService", but don't change it.
 + Advantage: It helps us to reduce count of repeatable code.
-##3. Barbara Liskov substitution principle:
+## 3. Barbara Liskov substitution principle:
 + Let's try to create implementation of our 3 Service's interfaces.
 + We can't do it because our generic interface can't find model Car or Bus.
 + Let's create it with extends from our 'CORE' model "Machine".
@@ -29,7 +29,7 @@ a solution for everything.
 + Advantage: For future changes it's enough create new implementation of interface and remove last part of expression.
           It gives us re-usability, reduced coupling, and easier maintenance of our code.
     
-##4. Interface Segregation principle:
+## 4. Interface Segregation principle:
    - Let's create interface with all methods form MachineService 
    and CarService(package = "badpractice')
    - RESULT:
@@ -41,7 +41,7 @@ a solution for everything.
    
        
       
-##5. Dependency Inversion principle:
+## 5. Dependency Inversion principle:
    - To implement this principle, I want create on our CarServiceImpl class next ref :
    *     MachineService<Machine> machineService;
    - Let's link this reference: 
@@ -69,7 +69,7 @@ a solution for everything.
     
    - Advantage: Maintainability, Testability, Readability, Flexibility, Extensibility, Team-ability.
    
-#RESULT OF WORK :
+# RESULT OF WORK :
 ### 1. Refreshed knowledge in so many forgotten places.
 ### 2. Learn some features with Generics.
 ### 3. Great example of SOLID principles understanding.
