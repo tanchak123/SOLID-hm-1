@@ -20,7 +20,7 @@ a solution for everything.
 + We can't do it because our generic interface can't find model Car or Bus.
 + Let's create it with extends from our 'CORE' model "Machine".
 + For better imagination of this principle let's create counter of created models of machines on class "Machine".
-+ So, any time when we create Machine or Car or Bus with counter will increase.
++ So, any time when we create Machine or Car or Bus our counter will increase.
 + It means that before we launch Car or Bus constructor, we launch the constructor of class "Machine"
 + RESULT: 
     *     Any object we should create like this:
