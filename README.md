@@ -59,8 +59,8 @@ a solution for everything.
          TV: false 
          Wi-Fi false
          STOP
-         RUN
          MachineServiceUpdateImpl: 
+         RUN
          TV: true 
          Wi-Fi true
          STOP: 
