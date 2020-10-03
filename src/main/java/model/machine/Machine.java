@@ -1,6 +1,6 @@
 package model.machine;
 
-public class Machine {
+public abstract class Machine {
     private static int counter = 0;
     private String entity = "Unknown";
     private int id = 0;

@@ -1,4 +1,5 @@
 package service.machine.car;
+
 import model.machine.Machine;
 import model.machine.car.Car;
 import service.machine.MachineService;
@@ -7,7 +8,7 @@ public class CarServiceImpl implements CarService {
 
     MachineService<Machine> machineService;
 
-    public CarServiceImpl(MachineService machineService) {
+    public CarServiceImpl(MachineService<Machine> machineService) {
         this.machineService = machineService;
     }
 

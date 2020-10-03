@@ -1,7 +1,5 @@
 package badpractice;
 
-import model.machine.car.Car;
-
 public interface AllService<T> {
 
     void openCloseRoof(T t);

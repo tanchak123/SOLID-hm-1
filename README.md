@@ -1,7 +1,7 @@
 # My description to homework
 ##### I will consistently write the code point by point referring to the principles of SOLID. GOOD LUCK HAVE FUN :)
 ## 1. Single Responsibility principle:
-+ Create class "Machine" that is responsible for filling the fields.
++ Create abstract class "Machine" that is responsible for filling the fields.
 + Create class "MachineServiceImpl' that is responsible for basic function for consumer.
 + RESULT: 
 *     We see 2 classes that is responsible for one 
@@ -23,15 +23,18 @@ a solution for everything.
 + So, any time when we create Machine or Car or Bus our counter will increase.
 + It means that before we launch Car or Bus constructor, we launch the constructor of class "Machine"
 + RESULT: 
-    *     Any object we should create like this:
+    *     Pricniple says that we should create objects like this:
           Machine machine = new Bus();
+          Bus bus = (Bus) machine;
+          or
           BusService busService = new BusServiceImpl();
++ I think you see a disadvantage of this principle. U should to cast extends objects :(  
 + Advantage: For future changes it's enough create new implementation of interface and remove last part of expression.
           It gives us re-usability, reduced coupling, and easier maintenance of our code.
     
 ## 4. Interface Segregation principle:
    - Let's create interface with all methods form MachineService 
-   and CarService(package = "badpractice')
+   and CarService(package = "main.badpractice')
    - RESULT:
    *     We see that we need realize ALL methods, 
          even if we don't need it.
@@ -52,21 +55,47 @@ a solution for everything.
     Wi-Fi and Tv turn on when car start move and turn off when stop.
    - Don't forget make some change of model Machine(btw principle number 2).
    - Created class implements MachineServiceUpdate
-   - Create class "Example" with psvm method.
+   - Create class "Example" with psvm method and run 'start' method with two implmenets("updateMachine" and "machine".
+   *     MachineServiceImpl
+         BEFORE
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: false
+         AFTER
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: true
+         MachineServiceUpdateImpl
+         BEFORE
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: false
+         AFTER
+         TV :: true
+         Wi-Fi :: true
+         RUNNING? :: true
+   - We see hard link
+   - Now we should create props.properties on resources
+   - Run method 'startWithProps'.
    - RESULT :
-   *     MachineServiceImpl: 
-         RUN
-         TV: false 
-         Wi-Fi false
-         STOP
-         MachineServiceUpdateImpl: 
-         RUN
-         TV: true 
-         Wi-Fi true
-         STOP: 
-         TV: false 
-         Wi-Fi false
-    
+   *     MachineServiceImpl
+         BEFORE
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: false
+         AFTER
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: true
+         MachineServiceUpdateImpl
+         BEFORE
+         TV :: false
+         Wi-Fi :: false
+         RUNNING? :: false
+         AFTER
+         TV :: true
+         Wi-Fi :: true
+         RUNNING? :: true
    - Advantage: Maintainability, Testability, Readability, Flexibility, Extensibility, Team-ability.
    
 # RESULT OF WORK :
