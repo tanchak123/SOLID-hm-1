@@ -28,7 +28,8 @@ a solution for everything.
           Bus bus = (Bus) machine;
           or
           BusService busService = new BusServiceImpl();
-+ I think you see a disadvantage of this principle. U should to cast extends objects :(  
++ I think you see a disadvantage of this principle. U should to cast extends objects :(
++ So if u want create model u need make model abstract class
 + Advantage: For future changes it's enough create new implementation of interface and remove last part of expression.
           It gives us re-usability, reduced coupling, and easier maintenance of our code.
     
